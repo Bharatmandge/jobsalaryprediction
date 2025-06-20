@@ -1,0 +1,12 @@
+title,company,experience,location,python,excel,sql,salary
+Data Analyst,ABC Ltd,1,Pune,1,1,0,350000
+ML Engineer,TCS,2,Mumbai,1,0,1,750000
+Data Scientist,XYZ Pvt,3,Bangalore,1,1,1,900000
+Analyst,Infosys,1,Pune,0,1,1,400000
+AI Engineer,Google,5,Bangalore,1,0,1,1200000
+Junior Analyst,Capgemini,0,Pune,0,1,0,250000
+Senior Data Scientist,Microsoft,6,Hyderabad,1,1,1,1500000
+BI Developer,Amazon,4,Chennai,1,1,1,950000
+Data Engineer,Wipro,3,Pune,1,0,1,700000
+Statistician,Deloitte,2,Bangalore,0,1,1,600000
+

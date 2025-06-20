@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💼 Job Salary Predictor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: #333;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 35px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 480px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+
+    input[type="number"],
+    button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    input[type="number"]:focus {
+      outline: none;
+      border: 1px solid #3498db;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    .skills {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skills label {
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 18px;
+      text-align: center;
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    .error {
+      color: #e74c3c;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>💼 Job Salary Predictor</h1>
+    <form action="/predict" method="post">
+      <label for="experience">Experience (in years)</label>
+      <input type="number" name="experience" step="0.1" placeholder="e.g., 2.5" required>
+
+      <label>Skills</label>
+      <div class="skills">
+        <label><input type="checkbox" name="python" value="1"> Python</label>
+        <label><input type="checkbox" name="excel" value="1"> Excel</label>
+        <label><input type="checkbox" name="sql" value="1"> SQL</label>
+      </div>
+
+      <button type="submit">🚀 Predict Salary</button>
+    </form>
+
+    {% if salary %}
+      <div class="result">
+        🤑 Predicted Salary: ₹{{ salary }}
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
