@@ -15,7 +15,7 @@ Predict job salaries based on experience and skills using Machine Learning & Fla
 - Takes inputs: **Experience**, **Python**, **Excel**, **SQL**
 - Clean responsive UI (HTML/CSS)
 - Flask-powered web app
-- Perfect for Data Science portfolio
+- perfect for the data science portfolio
 
 ---
 
